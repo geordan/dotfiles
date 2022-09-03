@@ -48,8 +48,7 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 local lspconfig = require("lspconfig")
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
---[[ l ]]ocal servers = { "pyright", "gopls", "terraformls", "tflint" }
-local servers = { "maintained" }
+local servers = { "pyright", "gopls", "terraformls", "tflint" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
