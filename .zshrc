@@ -71,16 +71,21 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(fzf \
-    golang \
-    kubectl \
-    git-flow \
-    colored-man-pages \
-    ssh-agent \
-    zsh-interactive-cd \
-    history \
-    helm \
     ansible \
-    z git aws docker terraform)
+    aws \
+    colored-man-pages \
+    docker \
+    git \
+    git-flow \
+    golang \
+    helm \
+    history \
+    kubectl \
+    ssh-agent \
+    terraform \
+    vi-mode \
+    zsh-interactive-cd \
+    z)
 
 source $ZSH/oh-my-zsh.sh
 
