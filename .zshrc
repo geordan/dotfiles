@@ -83,8 +83,8 @@ plugins=(fzf \
     kubectl \
     ssh-agent \
     terraform \
-    vi-mode \
     zsh-interactive-cd \
+    zsh-vi-mode \
     z)
 
 source $ZSH/oh-my-zsh.sh
