@@ -112,13 +112,19 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias "a"="ansible"
+alias "ap"="ansible-playbook"
+alias "ag"="ansible-galaxy"
 alias "aws.config"="nvim ~/.aws/config"
 alias "exa"="ls"
 alias "le"="exa -la"
 alias init.vim="nvim ~/.config/nvim/init.vim"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias v="vagrant"
+alias vssh="vagrant ssh"
 alias zsh.config="nvim ~/.zshrc"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
