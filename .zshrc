@@ -84,6 +84,7 @@ plugins=(fzf \
     ssh-agent \
     terraform \
     zsh-interactive-cd \
+    zsh-fzf-history-search \
     zsh-vi-mode \
     z)
 
