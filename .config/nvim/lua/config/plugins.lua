@@ -73,7 +73,8 @@ return packer.startup(function(use)
 	use("sainnhe/sonokai")
 	use("kyazdani42/nvim-web-devicons")
 	use({ "ellisonleao/gruvbox.nvim" })
-  use 'tanvirtin/monokai.nvim'
+  -- use 'tanvirtin/monokai.nvim'
+  use 'navarasu/onedark.nvim'
 
 	-- Statusline
 	use("nvim-lualine/lualine.nvim")
