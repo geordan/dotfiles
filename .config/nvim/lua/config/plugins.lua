@@ -78,14 +78,16 @@ return packer.startup(function(use)
 	-- Statusline
 	use("nvim-lualine/lualine.nvim")
 
-	-- Git
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup({})
-		end,
-	})
+  -- Comments
+  use({
+    "terrortylor/nvim-comment",
+    config = function()
+      require('nvim_comment').setup()
+    end,
+  })
 
+
+	-- Git
 	use({
 		"lewis6991/gitsigns.nvim",
 		config = function()
