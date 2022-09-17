@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/opt/homebrew/bin:/Users/geordan_liban/Library/Python/3.9/bin:$HOME/Library/Python/3.8/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/opt/homebrew/bin:/Users/geordan_liban/Library/Python/3.9/bin:$HOME/Library/Python/3.8/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -121,20 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias "a"="ansible"
-alias "ap"="ansible-playbook"
-alias "ag"="ansible-galaxy"
-alias "aws.config"="nvim ~/.aws/config"
-alias "exa"="ls"
-alias "le"="exa -la"
-alias init.vim="nvim ~/.config/nvim/init.vim"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
-alias v="vagrant"
-alias vssh="vagrant ssh"
-alias zsh.config="nvim ~/.zshrc"
+[ -f ~/.alias ] && source ~/.alias
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
