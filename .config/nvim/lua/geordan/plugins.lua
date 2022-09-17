@@ -1,4 +1,5 @@
-return require('packer').startup(function(use)
+local use = require('packer').use
+require('packer').startup(function()
   -- packer can manage itself
   use 'wbthomason/packer.nvim'
 

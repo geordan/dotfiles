@@ -1,7 +1,0 @@
-require('geordan.settings')
-require('geordan/lsp-config')
-require('geordan/mappings')
-require('geordan/nvim-tree')
-require('geordan/onedark')
-require('geordan/plugins')
-require('geordan/settings')
