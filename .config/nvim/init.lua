@@ -1,6 +1,6 @@
 require('geordan.mappings')
 require('geordan.plugins')
+require('geordan.nvim-comment')
 require('geordan.settings')
-require('geordan.lsp-config')
 require('geordan.nvim-tree')
 require('geordan.onedark')
