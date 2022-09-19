@@ -1,19 +1,8 @@
-require('geordan.mappings')
-require('geordan.plugins')
-require('geordan.nvim-comment')
-require('geordan.settings')
-require('geordan.nvim-tree')
-require('geordan.onedark')
-require('geordan.lsp')
-
-vim.cmd([[silent! autocmd! filetypedetect BufRead,BufNewFile *.tf]])
-vim.cmd([[autocmd BufRead,BufNewFile *.hcl set filetype=hcl]])
-vim.cmd([[autocmd BufRead,BufNewFile .terraformrc,terraform.rc set filetype=hcl]])
-vim.cmd([[autocmd BufRead,BufNewFile *.tf,*.tfvars set filetype=terraform]])
-vim.cmd([[autocmd BufRead,BufNewFile *.tfstate,*.tfstate.backup set filetype=json]])
-
-vim.cmd([[let g:terraform_fmt_on_save=1]])
-vim.cmd([[let g:terraform_align=1]])
-
-require'lspconfig'.terraformls.setup{}
-require'lspconfig'.tflint.setup{}
+require("config.options")
+require("config.keymaps")
+require("config.plugins")
+require("config.colorscheme")
+require("config.lsp")
+require("config.lualine")
+require("config.treesitter")
+--require("config.null-ls")
