@@ -51,6 +51,11 @@ map("x", "K", ":move '<-2<CR>gv-gv", opts)
 map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+map("n", "<leader>ti", ":!terraform init<CR>", opts)
+map("n", "<leader>tv", ":!terraform validate<CR>", opts)
+map("n", "<leader>tp", ":!terraform plan<CR>", opts)
+map("n", "<leader>taa", ":!terraform apply -auto-approve<CR>", opts)
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
