@@ -4,6 +4,7 @@ require('geordan.nvim-comment')
 require('geordan.settings')
 require('geordan.nvim-tree')
 require('geordan.onedark')
+require('geordan.lsp')
 
 vim.cmd([[silent! autocmd! filetypedetect BufRead,BufNewFile *.tf]])
 vim.cmd([[autocmd BufRead,BufNewFile *.hcl set filetype=hcl]])
