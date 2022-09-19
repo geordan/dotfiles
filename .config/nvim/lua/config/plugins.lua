@@ -81,9 +81,9 @@ return packer.startup(function(use)
 
 	-- Git
 	use({
-		"numToStr/Comment.nvim",
+		"terrortylor/nvim-comment",
 		config = function()
-			require("Comment").setup({})
+        require('nvim_comment').setup()
 		end,
 	})
 
