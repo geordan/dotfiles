@@ -45,3 +45,9 @@ urgency.user.tag.firm.coefficient=6
 urgency.user.tag.kaizen.coefficient=4
 urgency.user.tag.later.coefficient=-10.0
 #include /Users/geordan_liban/.config/task/gruvbox.theme
+
+# report - inbox
+report.in.columns           = id,description
+report.in.description       = Inbox
+report.in.filter            = status:pending limit:page (+in)
+report.in.labels            = ID,Description
