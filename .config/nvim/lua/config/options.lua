@@ -1,45 +1,46 @@
 local options = {
-  joinspaces = true,
-  laststatus =2,
-  lazyredraw = true,
-  linebreak = true,
-  list = true,
-  pumblend = 10,
-  smarttab = true,
-  showcmd = false,
   backup = false,
   clipboard = "unnamedplus",
   cmdheight = 2,
   completeopt = { "menuone", "noselect" },
   conceallevel = 0,
+  cursorline = true,
+  expandtab = true,
   fileencoding = "utf-8",
   hlsearch = true,
   ignorecase = true,
+  joinspaces = true,
+  laststatus =2,
+  lazyredraw = true,
+  linebreak = true,
+  list = true,
+  listchars = { eol = '¬', extends = '⟩', precedes = '⟨', tab = '│·', trail = '·', space = '·' },
   mouse = "a",
+  number = true,
+  numberwidth = 4,
+  pumblend = 10,
   pumheight = 10,
+  relativenumber = true,
+  scrolloff = 8,
+  shiftwidth = 2,
+  showcmd = false,
   showmode = false,
   showtabline = 2,
+  sidescrolloff = 8,
+  signcolumn = "yes",
   smartcase = true,
   smartindent = true,
+  smarttab = true,
   splitbelow = true,
   splitright = true,
   swapfile = false,
+  tabstop = 2,
   termguicolors = true,
   timeoutlen = 1000,
   undofile = true,
   updatetime = 300,
-  writebackup = false,
-  expandtab = true,
-  shiftwidth = 2,
-  tabstop = 2,
-  cursorline = true,
-  number = true,
-  relativenumber = true,
-  numberwidth = 4,
-  signcolumn = "yes",
   wrap = false,
-  scrolloff = 8,
-  sidescrolloff = 8,
+  writebackup = false,
 }
 
 if not vi then
@@ -52,8 +53,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+-- vim.cmd "set whichwrap+=<,>,[,],h,l"
+-- vim.cmd [[set iskeyword+=-]]
 
 
 if vim.fn.filereadable('/usr/local/bin/python3') == 1 then

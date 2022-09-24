@@ -108,3 +108,6 @@ vim.cmd([[
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 ]])
+
+-- Go run
+keymap("n", "<leader>rr", ":!go run '%:p'<CR>", opts)
