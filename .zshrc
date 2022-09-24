@@ -141,10 +141,19 @@ export KUBE_EDITOR=nvim
 
 # Show projects w/o next actions
 # TODO: consider moving this. Perhaps a tickler to run every n days
+RED='\033[0;31m'
 projects=$(tw_projects_without_next_action.sh)
 if [ "$projects" != "" ]
 then
-  print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
+  printf "${RED}Attention: The following projects don't currently have a next action:\n"
   echo $projects
   echo
+fi
+
+# Task Warrior - Check on Waiting For's
+waiting=$(task +waiting +PENDING count)
+if [ "$waiting" != "0" ]
+then
+  echo "Any progress on these waiting-fors?"
+  task +waiting +PENDING ls
 fi
