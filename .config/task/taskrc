@@ -3,7 +3,7 @@
 # For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
 # 'man task-sync' or 'man taskrc'
 
-# Here is an example of entries that use the default, override and blank values
+# Here is an example of that use the default, override and blank values
 #   variable=foo   -- By specifying a value, this overrides the default
 #   variable=      -- By specifying no value, this means no default
 #   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
@@ -51,3 +51,4 @@ report.in.columns           = id,description
 report.in.description       = Inbox
 report.in.filter            = status:pending limit:page (+in)
 report.in.labels            = ID,Description
+report.in.sort              = id+
