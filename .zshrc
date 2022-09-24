@@ -121,6 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+[ -f ~/.functions ] && source ~/.functions
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/.creds ] && source ~/.creds
 
