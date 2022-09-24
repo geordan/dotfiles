@@ -138,3 +138,13 @@ export KUBE_EDITOR=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Show projects w/o next actions
+# TODO: consider moving this. Perhaps a tickler to run every n days
+# projects=$(projects_without_next_action.sh)
+if [ "$projects" != "" ]
+then
+  print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
+  echo $projects
+  echo
+fi

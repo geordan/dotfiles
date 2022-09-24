@@ -1,28 +1,20 @@
-alias rnd='task add +rnd'
-alias "a"="ansible"
-alias "ag"="ansible-galaxy"
-alias "ap"="ansible-playbook"
-alias "aws.config"="nvim ~/.aws/config"
-alias "b"="bat --theme=gruvbox-dark"
-alias "dcr"="docker-compose run"
-alias "dcu"="docker-compose up"
-alias "exa"="ls"
-alias "le"="exa -la"
-alias "t"="task"
-alias "task-due-week"="task +WEEK list"
-alias "tin"='task add +in'
+## Task Warrior Functions
+
+read_and_review (){
+    link="$1"
+    title=$(webpage_title $link)
+    echo $title
+    descr="\"Read and review: $title\""
+    id=$(task add +next +rnr "$descr" | sed -n 's/Created task \(.*\)./\1/p')
+    task "$id" annotate "$link"
+}
+
 tickle () {
     deadline=$1
     shift
     tin +tickle wait:$deadline $@
 }
-alias tick=tickle
-alias think='tickle +1d'
-alias init.vim="nvim ~/.config/nvim/init.vim"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias v="nvim"
-alias v="vagrant"
-alias vi="nvim"
-alias vim="nvim"
-alias vssh="vagrant ssh"
-alias zsh.config="nvim ~/.zshrc"
+
+webpage_title (){
+    wget -qO- "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
+}
