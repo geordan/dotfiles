@@ -141,7 +141,7 @@ export KUBE_EDITOR=nvim
 
 # Show projects w/o next actions
 # TODO: consider moving this. Perhaps a tickler to run every n days
-# projects=$(projects_without_next_action.sh)
+projects=$(tw_projects_without_next_action.sh)
 if [ "$projects" != "" ]
 then
   print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
