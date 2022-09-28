@@ -169,6 +169,8 @@ return packer.startup(function(use)
       let g:vimwiki_list = [{'path': '~/code/wiki/',  'syntax': 'markdown', 'ext': '.md'}]
     ]])
   })
+
+  use({ "christoomey/vim-tmux-navigator", })
   -- Automatically set up your configuration after cloning packer.nvim
   -- plugins end here
   if PACKER_BOOTSTRAP then
