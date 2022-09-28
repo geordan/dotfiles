@@ -63,4 +63,7 @@ if vim.fn.filereadable('/usr/local/bin/python3') == 1 then
 end
 
 
+-- # generate vimwiki diary template
 vim.cmd([[autocmd BufNewFile ~/code/wiki/diary/*.md :silent 0r !~/bin/generate-vimwiki-diary-template.py '%']])
+-- # balance buffer size when nvim is resized (via tmux)
+vim.cmd([[autocmd Vimresized * :wincmd =]])

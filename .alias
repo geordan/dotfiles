@@ -3,6 +3,7 @@ alias "ag"="ansible-galaxy"
 alias "ap"="ansible-playbook"
 alias "aws.config"="nvim ~/.aws/config"
 alias "b"="bat --theme=gruvbox-dark"
+alias "c"="clear"
 alias "dcr"="docker-compose run"
 alias "dcu"="docker-compose up"
 alias "exa"="ls"
@@ -16,6 +17,7 @@ alias rnd='task add +rnd +next'
 alias rnr=read_and_review
 alias think='tickle +1d'
 alias tick=tickle
+alias tkill="for s in \$(tmux list-sessions | awk '{print \$1}' | rg ':' -r '' | fzy); do tmux kill-session -t \$s; done;"
 alias v="nvim"
 alias v="vagrant"
 alias vi="nvim"

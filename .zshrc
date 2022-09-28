@@ -167,3 +167,6 @@ then
   echo "Any progress on these waiting-fors?"
   task +waiting +PENDING ls
 fi
+
+# Attach to existing or create first tmux session when launching zsh
+ta
