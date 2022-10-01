@@ -1,6 +1,7 @@
 require "user.keymaps"
 require "user.options"
-require "user.plugins"
 
+require "user.plugins"
+require "user.colorscheme"
 require "user.nvim-tree"
-require "user.comment"
+require "user.nvim-comment"
