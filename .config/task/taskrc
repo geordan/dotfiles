@@ -33,19 +33,30 @@ news.version=2.6.0
 
 include no-color.theme
 
+# contexts ----------------------------------------
+context.home.read=+home -in
+context.home.write=+home
+
+context.work.read=+firm -in
+context.work.write=+firm
+
+
+# reports ----------------------------------------
+report.in.columns           = id,description,tags
+report.in.description       = Inbox
+report.in.filter            = status:pending limit:page (+in)
+report.in.labels            = ID,Description,Tags
+report.in.sort              = id+
+
+
+# urgency ----------------------------------------
 uda.priority.values = H,M,,L
 urgency.uda.priority.L.coefficient  = 0
 urgency.uda.priority..coefficient   = 1.8
-
 
 urgency.user.tag.firm.coefficient   = 6
 urgency.user.tag.kaizen.coefficient = 4
 urgency.user.tag.wait.coefficient   = -1
 urgency.user.tag.later.coefficient  = -10.0
 
-# report - inbox
-report.in.columns           = id,description,tags
-report.in.description       = Inbox
-report.in.filter            = status:pending limit:page (+in)
-report.in.labels            = ID,Description,Tags
-report.in.sort              = id+
+
