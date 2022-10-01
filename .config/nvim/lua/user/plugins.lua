@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-tree.lua"})
 	use({ "nvim-lualine/lualine.nvim"})
   use({ "christoomey/vim-tmux-navigator"})
+  use({ "terrortylor/nvim-comment"})
 	--use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
 	--use({ "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" })
 	--use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter

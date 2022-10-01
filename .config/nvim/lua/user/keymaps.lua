@@ -36,7 +36,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- NvimTree
-keymap("n", "i", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>i", ":NvimTreeToggle<CR>", opts)
 
 
 -- Move text up and down
