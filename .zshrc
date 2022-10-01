@@ -8,8 +8,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/geordan_liban/Library/Python/3.9/bin:$HOME/Library/Python/3.8/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export ZSH="$HOME/.oh-my-zsh"   # Path to your oh-my-zsh installation.
 
 # -- nvm ----------------------------------------
 export NVM_DIR="$HOME/.nvm"
