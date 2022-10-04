@@ -166,7 +166,7 @@ return packer.startup(function(use)
   use({
     "vimwiki/vimwiki",
     vim.cmd([[
-      let g:vimwiki_list = [{'path': '~/code/wiki/',  'syntax': 'markdown', 'ext': '.md'}]
+      let g:vimwiki_list = [{'path': '~/repos/geordan/wiki/',  'syntax': 'markdown', 'ext': '.md'}]
     ]])
   })
 
