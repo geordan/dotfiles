@@ -10,7 +10,7 @@ local options = {
   hlsearch = true,
   ignorecase = true,
   joinspaces = true,
-  laststatus =2,
+  laststatus = 2,
   lazyredraw = true,
   linebreak = true,
   list = true,
@@ -61,4 +61,9 @@ if vim.fn.filereadable('/usr/local/bin/python3') == 1 then
   -- speeding up start-up.
   vim.g.python3_host_prog = '/usr/local/bin/python3'
 end
-  
+
+
+-- # generate vimwiki diary template
+vim.cmd([[autocmd BufNewFile ~/code/wiki/diary/*.md :silent 0r !~/bin/generate-vimwiki-diary-template.py '%']])
+-- # balance buffer size when nvim is resized (via tmux)
+vim.cmd([[autocmd Vimresized * :wincmd =]])

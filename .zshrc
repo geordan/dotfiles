@@ -8,9 +8,20 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/geordan_liban/Library/Python/3.9/bin:$HOME/Library/Python/3.8/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export ZSH="$HOME/.oh-my-zsh"   # Path to your oh-my-zsh installation.
 
+# -- nvm ----------------------------------------
+export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+#
+#
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -157,3 +168,6 @@ then
   echo "Any progress on these waiting-fors?"
   task +waiting +PENDING ls
 fi
+
+# Attach to existing or create first tmux session when launching zsh
+ta

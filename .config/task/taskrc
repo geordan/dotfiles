@@ -3,52 +3,60 @@
 # For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
 # 'man task-sync' or 'man taskrc'
 
-# Here is an example of that use the default, override and blank values
-#   variable=foo   -- By specifying a value, this overrides the default
-#   variable=      -- By specifying no value, this means no default
-#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
-
-# You can also refence environment variables:
-#   variable=$HOME/task
-#   variable=$VALUE
-
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-# data.location=/Users/geordan_liban/.task
+data.location=/Users/geordan_liban/.task
 
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
-
 data.location=~/.local/share/task
 hooks.location=~/.config/task/hooks
 
+news.version=2.6.0
+
 # Color theme (uncomment one to use)
-#include light-16.theme
-#include light-256.theme
+#include /Users/geordan_liban/.config/task/gruvbox.theme
 #include dark-16.theme
 #include dark-256.theme
-#include dark-red-256.theme
-#include dark-green-256.theme
 #include dark-blue-256.theme
-#include dark-violets-256.theme
-include dark-yellow-green.theme
 #include dark-gray-256.theme
 #include dark-gray-blue-256.theme
+#include dark-green-256.theme
+#include dark-red-256.theme
+#include dark-violets-256.theme
+#include dark-yellow-green.theme
+#include light-16.theme
+#include light-256.theme
 #include solarized-dark-256.theme
 #include solarized-light-256.theme
-#include no-color.theme
 
-news.version=2.6.0
-urgency.user.tag.billable.coefficient=8
-urgency.user.tag.firm.coefficient=6
-urgency.user.tag.kaizen.coefficient=4
-urgency.user.tag.later.coefficient=-10.0
-#include /Users/geordan_liban/.config/task/gruvbox.theme
+include no-color.theme
 
-# report - inbox
-report.in.columns           = id,description
+# contexts ----------------------------------------
+context.home.read=+home -in
+context.home.write=+home
+
+context.work.read=+firm -in
+context.work.write=+firm
+
+
+# reports ----------------------------------------
+report.in.columns           = id,description,tags
 report.in.description       = Inbox
 report.in.filter            = status:pending limit:page (+in)
-report.in.labels            = ID,Description
+report.in.labels            = ID,Description,Tags
 report.in.sort              = id+
+
+
+# urgency ----------------------------------------
+uda.priority.values = H,M,,L
+urgency.uda.priority.L.coefficient  = 0
+urgency.uda.priority..coefficient   = 1.8
+
+urgency.user.tag.firm.coefficient   = 6
+urgency.user.tag.kaizen.coefficient = 4
+urgency.user.tag.wait.coefficient   = -1
+urgency.user.tag.later.coefficient  = -10.0
+
+

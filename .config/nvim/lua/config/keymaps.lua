@@ -25,6 +25,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+
+-- # maximize window
+keymap("n", "<leader>-", ':wincmd _<cr>:wincmd |<cr>', opts)
+-- # balance windows
+keymap("n", "<leader>=", ":wincmd=<cr>", opts)
+
 -- Leader +w to save the file
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>wz", ":wq!<cr>", opts)
