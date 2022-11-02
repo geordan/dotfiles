@@ -8,6 +8,7 @@ alias "dcr"="docker-compose run"
 alias "dcu"="docker-compose up"
 alias "exa"="ls"
 alias "in"='task add +in'
+alias "k"="kubectl"
 alias "le"="exa -la"
 alias "t"="task"
 alias "task-due-week"="task +WEEK list"

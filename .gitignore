@@ -1,4 +1,5 @@
 **packer_compiled.lua
 .config/configstore**
+.config/gatsby**
 .config/htop**
 swap-pane**
