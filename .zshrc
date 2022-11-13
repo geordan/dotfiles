@@ -53,7 +53,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -84,27 +84,28 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(helm fzf \
-    ansible \
-    aws \
-    colored-man-pages \
-    docker \
-    git \
-    git-flow \
-    golang \
-    helm \
-    history \
-    kubectl \
-    ssh-agent \
-    terraform \
-    zsh-interactive-cd \
-    zsh-fzf-history-search \
-    zsh-vi-mode \
-    z)
+# plugins=(helm fzf \
+#     ansible \
+#     aws \
+#     colored-man-pages \
+#     docker \
+#     git \
+#     git-flow \
+#     golang \
+#     helm \
+#     history \
+#     kubectl \
+#     ssh-agent \
+#     terraform \
+#     zsh-interactive-cd \
+#     zsh-fzf-history-search \
+#     zsh-vi-mode \
+#     z)
+plugins=(ansible aws colored-man-pages docker git helm kubectl terraform zsh-interactive-cd zsh-fzf-history-search zsh-vi-mode z)
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
+source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -133,7 +134,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -163,6 +164,3 @@ export KUBE_EDITOR=nvim
 #   echo "Any progress on these waiting-fors?"
 #   task +waiting +PENDING ls
 # fi
-
-# Attach to existing or create first tmux session when launching zsh
-# ta
