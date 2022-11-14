@@ -84,24 +84,7 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(helm fzf \
-#     ansible \
-#     aws \
-#     colored-man-pages \
-#     docker \
-#     git \
-#     git-flow \
-#     golang \
-#     helm \
-#     history \
-#     kubectl \
-#     ssh-agent \
-#     terraform \
-#     zsh-interactive-cd \
-#     zsh-fzf-history-search \
-#     zsh-vi-mode \
-#     z)
-plugins=(ansible aws colored-man-pages docker git helm kubectl terraform zsh-interactive-cd zsh-fzf-history-search zsh-vi-mode z)
+plugins=(ansible aws colored-man-pages docker fzf git helm kubectl terraform zsh-interactive-cd zsh-fzf-history-search zsh-vi-mode z)
 
 
 # User configuration
