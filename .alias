@@ -28,6 +28,7 @@ alias le="exa -la"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias rnd='task add +rnd +next'
 alias rnr=read_and_review
+alias sba="source .venv/bin/activate"
 alias t="task"
 alias task-due-week="task +WEEK list"
 alias tfaa="terraform apply -auto-approve"
