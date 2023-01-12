@@ -147,3 +147,4 @@ export KUBE_EDITOR=nvim
 #   echo "Any progress on these waiting-fors?"
 #   task +waiting +PENDING ls
 # fi
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
