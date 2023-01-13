@@ -2,4 +2,5 @@
 .config/configstore**
 .config/gatsby**
 .config/htop**
+.config/op**
 swap-pane**
