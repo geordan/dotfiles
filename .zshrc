@@ -17,6 +17,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 #
+export OP_BIOMETRIC_UNLOCK_ENABLED=true
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -148,3 +149,10 @@ export KUBE_EDITOR=nvim
 #   task +waiting +PENDING ls
 # fi
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# 1Password/AWS cli integration
+source /Users/geordan_liban/.config/op/plugins.sh
+# AWS cli Completion
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
