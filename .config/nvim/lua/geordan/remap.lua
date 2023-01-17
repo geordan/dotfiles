@@ -49,3 +49,39 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/geordan/packer.lua<CR>");
 -- vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+--
+--------------------------------------------------------------------------------
+-- telekasten
+--------------------------------------------------------------------------------
+vim.keymap.set("n", "<leader>zf", function() require('telekasten').find_notes() end)
+vim.keymap.set("n", "<leader>zd", function() require('telekasten').find_daily_notes() end)
+vim.keymap.set("n", "<leader>zg", function() require('telekasten').search_notes() end)
+vim.keymap.set("n", "<leader>zz", function() require('telekasten').follow_link() end)
+vim.keymap.set("n", "<leader>zT", function() require('telekasten').goto_today() end)
+vim.keymap.set("n", "<leader>zW", function() require('telekasten').goto_thisweek() end)
+vim.keymap.set("n", "<leader>zw", function() require('telekasten').find_weekly_notes() end)
+vim.keymap.set("n", "<leader>zn", function() require('telekasten').new_note() end)
+vim.keymap.set("n", "<leader>zN", function() require('telekasten').new_templated_note() end)
+vim.keymap.set("n", "<leader>zy", function() require('telekasten').yank_notelink() end)
+vim.keymap.set("n", "<leader>zc", function() require('telekasten').show_calendar() end)
+vim.keymap.set("n", "<leader>zC", function() require('calendar').CalendarT() end)
+vim.keymap.set("n", "<leader>zi", function() require('telekasten').paste_img_and_link() end)
+vim.keymap.set("n", "<leader>zt", function() require('telekasten').toggle_todo() end)
+vim.keymap.set("n", "<leader>zb", function() require('telekasten').show_backlinks() end)
+vim.keymap.set("n", "<leader>zF", function() require('telekasten').find_friends() end)
+vim.keymap.set("n", "<leader>zI", function() require('telekasten').insert_img_link({ i=true }) end)
+vim.keymap.set("n", "<leader>zp", function() require('telekasten').preview_img() end)
+vim.keymap.set("n", "<leader>zm", function() require('telekasten').browse_media() end)
+vim.keymap.set("n", "<leader>za", function() require('telekasten').show_tags() end)
+vim.keymap.set("n", "<leader>#", function() require('telekasten').show_tags() end)
+vim.keymap.set("n", "<leader>zr", function() require('telekasten').rename_note() end)
+
+-- on hesitation, bring up the panel
+vim.keymap.set("n", "<leader>z", function() require('telekasten').panel() end)
+
+-- we could define [[ in **insert mode** to call insert link
+-- inoremap [[ <cmd>:lua require('telekasten').insert_link()<CR>
+-- alternatively: leader [
+-- vim.keymap.set("i", "<leader>[", require('telekasten').insert_link({ i=true }) end)
+-- vim.keymap.set("i", "<leader>zt", require('telekasten').toggle_todo({ i=true }) end)
+-- vim.keymap.set("i", "<leader>#", require('telekasten').show_tags({i = true}) end)
