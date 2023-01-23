@@ -23,7 +23,7 @@ autoload -U compinit; compinit
 
 # Autocomplete hidden files
 _comp_options+=(globdots)
-source ~/dotfiles/zsh/external/completion.zsh
+source ~/repos/geordan/dotfiles/.config/zsh/external/completion.zsh
 
 # Load autocompletion
 fpath=($ZDOTDIR/external $fpath)
